@@ -19,6 +19,10 @@ public class Department implements Serializable {
 	public Integer getId() {
 		return Id;
 	}
+	
+	public void setId(Integer id) {
+		this.Id = id;
+	}
 
 	public String getNome() {
 		return nome;

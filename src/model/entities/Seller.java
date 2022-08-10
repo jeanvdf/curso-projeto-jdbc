@@ -4,26 +4,26 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
-public class Vendedor implements Serializable {
+public class Seller implements Serializable {
 	
 	private Integer Id;
-	private String nome;
+	private String name;
 	private String email;
-	private Date dataNascimento;
-	private Double salarioBase;
+	private Date birthDate;
+	private Double baseSalary;
 	
 	private Department department;
 	
-	public Vendedor() {
+	public Seller() {
 	}
 
-	public Vendedor(Integer id, String nome, String email, Date dataNascimento, Double salarioBase,
+	public Seller(Integer id, String nome, String email, Date dataNascimento, Double salarioBase,
 			Department department) {
 		Id = id;
-		this.nome = nome;
+		this.name = nome;
 		this.email = email;
-		this.dataNascimento = dataNascimento;
-		this.salarioBase = salarioBase;
+		this.birthDate = dataNascimento;
+		this.baseSalary = salarioBase;
 		this.department = department;
 	}
 
@@ -35,12 +35,12 @@ public class Vendedor implements Serializable {
 		Id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setName(String nome) {
+		this.name = nome;
 	}
 
 	public String getEmail() {
@@ -51,20 +51,20 @@ public class Vendedor implements Serializable {
 		this.email = email;
 	}
 
-	public Date getDataNascimento() {
-		return dataNascimento;
+	public Date getBirthDate() {
+		return birthDate;
 	}
 
-	public void setDataNascimento(Date dataNascimento) {
-		this.dataNascimento = dataNascimento;
+	public void setBirthDate(Date dataNascimento) {
+		this.birthDate = dataNascimento;
 	}
 
-	public Double getSalarioBase() {
-		return salarioBase;
+	public Double getBaseSalary() {
+		return baseSalary;
 	}
 
-	public void setSalarioBase(Double salarioBase) {
-		this.salarioBase = salarioBase;
+	public void setBaseSalary(Double salarioBase) {
+		this.baseSalary = salarioBase;
 	}
 
 	public Department getDepartment() {
@@ -88,14 +88,14 @@ public class Vendedor implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Vendedor other = (Vendedor) obj;
+		Seller other = (Seller) obj;
 		return Objects.equals(Id, other.Id);
 	}
 
 	@Override
 	public String toString() {
-		return "Vendedor [Id=" + Id + ", nome=" + nome + ", email=" + email + ", dataNascimento=" + dataNascimento
-				+ ", salarioBase=" + salarioBase + ", department=" + department + "]";
+		return "Vendedor [Id=" + Id + ", nome=" + name + ", email=" + email + ", dataNascimento=" + birthDate
+				+ ", salarioBase=" + baseSalary + ", department=" + department + "]";
 	}
 	
 }
